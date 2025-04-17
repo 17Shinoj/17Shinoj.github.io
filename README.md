@@ -231,5 +231,3 @@ v1.0.0
 
 ## ⭐ Star History
 [![Star History Chart](https://api.star-history.com/svg?repos=yourusername/organic-beauty&type=Date)](https://star-history.com/#yourusername/organic-beauty&Date)
-
-This README provides a comprehensive guide for both developers and users of your e-commerce platform. Update the placeholders (yourusername, specific implementation details) with your actual project information.
