@@ -3,207 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titos Organic | Premium Natural Beauty Products</title>
+    <title>TITOS ORGANIC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <!-- Top Banner -->
-    <div class="top-banner">
-        <div class="container">
-            <p>🌟 FREE Shipping on Orders Over $50 | Use Code: NATURAL25 for 25% Off</p>
-        </div>
+    <div class="announcement-bar">
+        <p>✨ FREE Shipping on Orders Over $50 | Use Code: NATURAL25 for 25% Off</p>
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">TITOS ORGANIC</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" data-bs-toggle="dropdown">Shop</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#skincare">Skincare</a>
-                            <a class="dropdown-item" href="#bodycare">Body Care</a>
-                            <a class="dropdown-item" href="#bestsellers">Best Sellers</a>
-                            <a class="dropdown-item" href="#new">New Arrivals</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#membership">Membership</a></li>
-                </ul>
-                <div class="nav-right">
-                    <a href="#search" class="nav-icon"><i class="fas fa-search"></i></a>
-                    <a href="#account" class="nav-icon"><i class="fas fa-user"></i></a>
-                    <a href="#cart" class="nav-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
-                </div>
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="logo">TITOS ORGANIC</div>
+            <div class="nav-links">
+                <a href="#" class="nav-link">Shop<span class="dropdown-arrow">▾</span></a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Membership</a>
             </div>
-        </div>
-    </nav>
+            <div class="nav-actions">
+                <a href="#" class="search-icon">🔍</a>
+                <a href="#" class="account-icon">👤</a>
+                <a href="#" class="cart-icon">🛒<span class="cart-count">0</span></a>
+            </div>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1>Save Up to 30% On Natural & Organic Beauty</h1>
-                    <p class="lead">Join today to get exclusive member prices on premium organic skincare</p>
-                    <div class="cta-buttons">
-                        <a href="#join" class="btn btn-primary btn-lg">Join Now</a>
-                        <a href="#shop" class="btn btn-outline-primary btn-lg">Shop Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img src="./images/hero-products.jpg" alt="Natural Beauty Products" class="img-fluid">
-                </div>
+        <div class="hero-content">
+            <h1>Save Up to 30% On<br>Natural & Organic<br>Beauty</h1>
+            <p>Join today to get exclusive member prices on premium organic skincare</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">Join Now</button>
+                <button class="btn-secondary">Shop Now</button>
             </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/natural-beauty-products.jpg" alt="Natural Beauty Products">
         </div>
     </section>
 
-    <!-- Featured Categories -->
+    <!-- Categories -->
     <section class="categories">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="category-card">
-                        <img src="./images/skincare.jpg" alt="Skincare">
-                        <h3>Premium Skincare</h3>
-                        <p>Natural ingredients for radiant skin</p>
-                        <a href="#skincare" class="btn btn-link">Shop Skincare →</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="category-card">
-                        <img src="./images/bestsellers.jpg" alt="Best Sellers">
-                        <h3>Best Sellers</h3>
-                        <p>Customer favorites you'll love</p>
-                        <a href="#bestsellers" class="btn btn-link">Shop Best Sellers →</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="category-card">
-                        <img src="./images/new.jpg" alt="New Arrivals">
-                        <h3>New Arrivals</h3>
-                        <p>Just launched organic products</p>
-                        <a href="#new" class="btn btn-link">Shop New →</a>
-                    </div>
-                </div>
-            </div>
+        <div class="category-item">
+            <img src="images/skincare.jpg" alt="Skincare">
+            <h2>Premium Skincare</h2>
+            <p>Natural ingredients for radiant skin</p>
+            <a href="#" class="category-link">Shop Skincare →</a>
+        </div>
+        <div class="category-item">
+            <img src="images/bestsellers.jpg" alt="Best Sellers">
+            <h2>Best Sellers</h2>
+            <p>Customer favorites you'll love</p>
+            <a href="#" class="category-link">Shop Best Sellers →</a>
+        </div>
+        <div class="category-item">
+            <img src="images/new-arrivals.jpg" alt="New Arrivals">
+            <h2>New Arrivals</h2>
+            <p>Just launched organic products</p>
+            <a href="#" class="category-link">Shop New →</a>
         </div>
     </section>
 
-    <!-- Best Sellers -->
+    <!-- Best-Selling Products -->
     <section class="products">
-        <div class="container">
-            <h2>Best-Selling Products</h2>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="product-card">
-                        <div class="badge">Best Seller</div>
-                        <img src="./images/black-seed.jpg" alt="Black Seed Beauty Bar">
-                        <h4>Black Seed Beauty Bar</h4>
-                        <div class="price">
-                            <span class="retail">$24.99</span>
-                            <span class="member">$19.99 Member Price</span>
-                        </div>
-                        <button class="btn btn-primary w-100">Add to Cart</button>
-                    </div>
-                </div>
-                <!-- Add more product cards -->
+        <h2>Best-Selling Products</h2>
+        <div class="product-card">
+            <span class="badge">Best Seller</span>
+            <img src="images/black-seed.jpg" alt="Black Seed Beauty Bar">
+            <h3>Black Seed Beauty Bar</h3>
+            <div class="price">
+                <span class="regular-price">$24.99</span>
+                <span class="member-price">$19.99 Member Price</span>
             </div>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
+    <!-- Features -->
     <section class="features">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="feature">
-                        <i class="fas fa-leaf"></i>
-                        <h4>100% Organic</h4>
-                        <p>Certified natural ingredients</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="feature">
-                        <i class="fas fa-truck"></i>
-                        <h4>Free Shipping</h4>
-                        <p>On orders over $50</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="feature">
-                        <i class="fas fa-heart"></i>
-                        <h4>Satisfaction</h4>
-                        <p>30-day money back guarantee</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="feature">
-                        <i class="fas fa-certificate"></i>
-                        <h4>Premium Quality</h4>
-                        <p>Authentic Ayurvedic formulas</p>
-                    </div>
-                </div>
-            </div>
+        <div class="feature">
+            <span class="feature-icon">🌿</span>
+            <h3>100% Organic</h3>
+            <p>Certified natural ingredients</p>
+        </div>
+        <div class="feature">
+            <span class="feature-icon">🚚</span>
+            <h3>Free Shipping</h3>
+            <p>On orders over $50</p>
+        </div>
+        <div class="feature">
+            <span class="feature-icon">💝</span>
+            <h3>Satisfaction</h3>
+            <p>30-day money back guarantee</p>
+        </div>
+        <div class="feature">
+            <span class="feature-icon">✨</span>
+            <h3>Premium Quality</h3>
+            <p>Authentic Ayurvedic formulas</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <h5>Shop</h5>
-                    <ul>
-                        <li><a href="#bestsellers">Best Sellers</a></li>
-                        <li><a href="#new">New Arrivals</a></li>
-                        <li><a href="#skincare">Skincare</a></li>
-                        <li><a href="#bodycare">Body Care</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5>About</h5>
-                    <ul>
-                        <li><a href="#story">Our Story</a></li>
-                        <li><a href="#ingredients">Ingredients</a></li>
-                        <li><a href="#sustainability">Sustainability</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5>Help</h5>
-                    <ul>
-                        <li><a href="#faq">FAQs</a></li>
-                        <li><a href="#shipping">Shipping</a></li>
-                        <li><a href="#returns">Returns</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5>Join Our Community</h5>
-                    <p>Get 10% off your first order</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email">
-                        <button type="submit" class="btn btn-primary">Sign Up</button>
-                    </form>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
-                    </div>
-                </div>
+        <div class="footer-section">
+            <h4>Shop</h4>
+            <ul>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Skincare</a></li>
+                <li><a href="#">Body Care</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>About</h4>
+            <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Ingredients</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Help</h4>
+            <ul>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Join Our Community</h4>
+            <p>Get 10% off your first order</p>
+            <div class="newsletter">
+                <input type="email" placeholder="Enter your email">
+                <button>Sign Up</button>
             </div>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/main.js"></script>
 </body>
 </html>
