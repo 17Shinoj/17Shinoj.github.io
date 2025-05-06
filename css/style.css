@@ -1,233 +1,38 @@
-/* style.css */
-:root {
-    --primary-color: #1a73e8;
-    --text-dark: #2d3748;
-    --text-light: #718096;
-    --background-light: #f7fafc;
-}
-
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    color: var(--text-dark);
-}
-
-/* Announcement Bar */
-.announcement-bar {
-    background-color: #2b4162;
-    color: white;
-    text-align: center;
-    padding: 8px;
-    font-size: 14px;
-}
-
-/* Header */
-.site-header {
-    background: white;
-    padding: 15px 30px;
-    border-bottom: 1px solid #edf2f7;
-}
-
-.main-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 30px;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: var(--text-dark);
-}
-
-.nav-actions {
-    display: flex;
-    gap: 20px;
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-    padding: 60px 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 40px;
-}
-
-.hero-content {
-    flex: 1;
-}
-
-.hero h1 {
-    font-size: 48px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.btn-primary {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.btn-secondary {
-    background: white;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    padding: 12px 24px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* Categories */
-.categories {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 30px;
-}
-
-.category-item {
-    text-align: center;
-}
-
-.category-item img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.category-link {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-/* Products */
-.products {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 30px;
-}
-
-.product-card {
-    border: 1px solid #edf2f7;
-    border-radius: 8px;
-    padding: 20px;
-    position: relative;
-}
-
-.badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #2b4162;
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-}
-
-/* Features */
-.features {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 30px;
-    text-align: center;
-}
-
-/* Footer */
-footer {
-    background: #2d3748;
-    color: white;
-    padding: 60px 30px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-section ul {
-    list-style: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.footer-section a {
-    color: #a0aec0;
-    text-decoration: none;
-    line-height: 2;
-}
-
-.newsletter input {
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-    margin-right: 8px;
-}
-
-.newsletter button {
-    background: var(--primary-color);
+header {
+    background-color: #333;
     color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 1em;
+    width: 100%;
+    text-align: center;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-    }
-    
-    .categories {
-        grid-template-columns: 1fr;
-    }
-    
-    .features {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    footer {
-        grid-template-columns: 1fr 1fr;
-    }
+main {
+    display: flex;
+    padding: 20px;
+    width: 80%;
+    justify-content: space-between;
 }
 
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 36px;
-    }
-    
-    .features {
-        grid-template-columns: 1fr;
-    }
-    
-    footer {
-        grid-template-columns: 1fr;
-    }
+aside {
+    width: 30%;
+}
+
+section {
+    width: 60%;
+}
+
+#response {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
 }

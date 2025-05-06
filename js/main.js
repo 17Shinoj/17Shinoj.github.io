@@ -1,61 +1,47 @@
-// main.js
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize tooltips
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
+function uploadFile() {
+    let input = document.getElementById('fileUploader');
+    if (input.files.length == 0) {
+        alert("No file selected.");
+        return;
+    }
+    let file = input.files[0];
+    let formData = new FormData();
+    formData.append('file', file);
+
+    fetch('https://share.streamlit.io/yourusername/yourrepo/app.py/upload', {  // Change URL to your Streamlit app
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert("File uploaded and processed successfully.");
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("Error uploading file.");
     });
+}
 
-    // Add to Cart functionality
-    const addToCartButtons = document.querySelectorAll('.btn-primary');
-    const cartCount = document.querySelector('.cart-count');
-    let count = 0;
-
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            count++;
-            cartCount.textContent = count;
-            
-            // Show added to cart notification
-            const notification = document.createElement('div');
-            notification.className = 'alert alert-success';
-            notification.textContent = 'Added to cart!';
-            notification.style.position = 'fixed';
-            notification.style.top = '20px';
-            notification.style.right = '20px';
-            notification.style.zIndex = '1000';
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.remove();
-            }, 2000);
-        });
-    });
-
-    // Newsletter form
-    const newsletterForm = document.querySelector('.newsletter-form');
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = newsletterForm.querySelector('input').value;
-            if (email) {
-                alert('Thank you for subscribing!');
-                newsletterForm.reset();
-            }
-        });
+function askQuestion() {
+    let question = document.getElementById('userQuestion').value;
+    if (!question) {
+        alert("Please type a question.");
+        return;
     }
 
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
+    fetch('https://share.streamlit.io/yourusername/yourrepo/app.py/ask', {  // Change URL to your Streamlit app
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ question: question })
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('response').innerText = data.answer;
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("Error processing question.");
     });
-});
+}
